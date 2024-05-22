@@ -29,6 +29,11 @@ def read_item(item_id: int, q: Optional[str] = None):
 def chat_with_bot(input_text: InputText):
     return {"your message": input_text.text}
 
+@app.post("/post")
+def chat_with_bot(number: int):
+    return {"your message": number}
+
+
 if __name__ == "__main__":
     import uvicorn
 
